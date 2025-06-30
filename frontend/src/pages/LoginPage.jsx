@@ -7,10 +7,7 @@ const LoginPage = () => {
 
     return (
         <div className=''>
-            <div>
-                <p>Sign in</p>
-            </div>
-            hello how are 
+            
         </div>
     )
 
