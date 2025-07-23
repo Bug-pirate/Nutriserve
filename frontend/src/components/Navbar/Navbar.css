@@ -1,0 +1,247 @@
+/* Navbar.css */
+
+.navbar-container {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.navbar-logo {
+  background-color: transparent;
+  /* background-color: #f0f0f0;
+  border-radius: 25px; */
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+  background-color: transparent;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  background-color: transparent;
+}
+
+.navbar-links p {
+  background-color: transparent;
+}
+
+.navbar-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-link-btn {
+  display: none;
+}
+
+.navbar-links a:hover {
+  /* color: #2ecc71; */
+  /* border-bottom: 2px solid #2ecc71; */
+  border-bottom: 2px solid #f59e0b;
+  transform: scale(1.1);
+}
+
+/* Login/Profile section */
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  width: 100px; /* fixed width to prevent shift */
+  justify-content: flex-end;
+  background-color: transparent;
+}
+
+.login-btn {
+  padding: 10px 18px;
+  background-color: #ffffff;
+  color: #333;
+  border: 2px solid #e5e5e5;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.login-btn:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    0 3px 6px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+.login-btn:active {
+  transform: translateY(0px);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.profile-icon {
+  font-size: 32px;
+  color: #2ecc71;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+  background-color: transparent;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+  color: #27ae60;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .login-link-btn {
+    display: block;
+  }
+  .navbar-auth {
+    display: none;
+  }
+  .navbar-fields {
+    padding: 12px 20px;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+  }
+  
+  .navbar-links {
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    font-size: 16px;
+  }
+  
+  .login-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  
+  .profile-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 580px) {
+  .navbar-fields {
+    padding: 10px 15px;
+  }
+  
+  
+  .navbar-links {
+    gap: 15px;
+    
+  }
+  
+  .navbar-links a {
+    font-size: 14px;
+  }
+  
+  .navbar-auth {
+    width: 80px;
+  }
+  
+  .login-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 20px;
+  width: 25px;
+  margin-right: 16px;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Rotate bars if open (optional effect) */
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    display: none;
+    
+  }
+
+  .navbar-links.show-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-links p {
+    margin: 10px 0;
+  }
+
+  .navbar-auth {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .navbar-fields {
+    position: relative;
+    flex-wrap: wrap;
+  }
+}
