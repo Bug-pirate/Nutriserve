@@ -1,0 +1,59 @@
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.*  # like .env.local, .env.production etc.
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+
+# Testing
+jest.config.js
+jest-coverage/
+cypress/videos/
+cypress/screenshots/
+
+# Misc
+*.local
+*.tsbuildinfo
+
+# Vite specific (if used)
+vite.svg
+.vite/
+
+# React Native (if mobile used at all)
+ios/
+android/
